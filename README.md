@@ -11,7 +11,8 @@ order to contemplate all the cases
 Install library from `npm`
 
 ```bash
-npm install react-native-svg-uri --save
+npm install github:rilambang/react-native-svg-uri --save
+npm install react-native-svg --save
 ```
 
 Link library react-native-svg
@@ -40,13 +41,11 @@ react-native link react-native-svg # not react-native-svg-uri !!!
 Here's a simple example:
 
 ```javascript
-import SvgUri from 'react-native-svg-uri';
+import SvgImage from 'react-native-svg-uri';
 
-const TestSvgUri = () => (
+const TestSvgImage = () => (
   <View style={styles.container}>
-    <SvgUri
-      width="200"
-      height="200"
+    <SvgImage
       source={{uri:'http://thenewcode.com/assets/images/thumbnails/homer-simpson.svg'}}
     />
   </View>
@@ -56,7 +55,9 @@ const TestSvgUri = () => (
 or a static file
 
 ```javascript
-<SvgUri width="200" height="200" source={require('./img/homer.svg')} />
+<View style={styles.container}>
+  <SvgImage source={require('./img/homer.svg')} />
+</View>
 ```
 
 This will render:
