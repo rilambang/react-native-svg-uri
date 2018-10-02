@@ -164,13 +164,8 @@ class SvgUri extends Component{
     switch (node.nodeName) {
     case 'svg':
       componentAtts = this.obtainComponentAtts(node, SVG_ATTS);
-      if (this.props.width) {
-        componentAtts.width = this.props.width;
-      }
-      if (this.props.height) {
-        componentAtts.height = this.props.height;
-      }
-
+        componentAtts.width = "100%";
+        componentAtts.height = "100%";
       return <Svg key={i} {...componentAtts}>{childs}</Svg>;
     case 'g':
       componentAtts = this.obtainComponentAtts(node, G_ATTS);
